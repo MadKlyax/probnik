@@ -64,33 +64,33 @@ function unlock(){
 
 //для открытия-закрытия попапов
 
-const popupLink=document.querySelector('.popup-link');//константа кнопок на которые тыкать для открытия popupов
+//const popupLink=document.querySelector('.popup-link');//константа кнопок на которые тыкать для открытия popupов
 //const body=document.querySelector('.body'); это у нас уже есть выше
-const lockPadding=document.querySelector('.lock-padding');
+//const lockPadding=document.querySelector('.lock-padding');
 
-let unlock = true;
+//let unlock = true;
 
-const timeout = 800;
+//const timeout = 800;
 
-if (popupLink.length > 0) {
-	for (let index = 0; index < popupLinks.length; index++) {
-		const popupLink = popupLinks[index];
-		popupLink.addEventListener('click', function (e) {
-			const popupName = popupLink.getAttribute("href").replace("#", "");//если было #popup то станет просто popup
-			const curentPopup = document.getElementDyId(popupName); //получает в переменную объект id которого popupname
-			popupOpen(curentPopup);
-			e.preventDefault();//запрещает перезагрузку стираицы при клике
-		});
-	}
-}
+//if (popupLink.length > 0) {
+//	for (let index = 0; index < popupLinks.length; index++) {
+//		const popupLink = popupLinks[index];
+//		popupLink.addEventListener('click', function (e) {
+//			const popupName = popupLink.getAttribute("href").replace("#", "");//если было #popup то станет просто popup
+//			const curentPopup = document.getElementDyId(popupName); //получает в переменную объект id которого popupname
+//			popupOpen(curentPopup);
+//			e.preventDefault();//запрещает перезагрузку стираицы при клике
+//		});
+//	}
+//}
 //закрытие попапа из любого объекта классом close-popup
-const popupCloseIcon=document.querySelectorAll('.close-popup');
-if (popupCloseIcon.length > 0) {
-	for (let index = 0; index < popupCloseIcon.length; index++) {
-		const el = popupCloseIcon[index];
-		el.addEventListener('click', function (e) {
-			popupClose(el.closest(".popup"));
-			e.preventDefault();//запрещает перезагрузку стираицы при клике
-		});
-	}
-}
+//const popupCloseIcon=document.querySelectorAll('.close-popup');
+//if (popupCloseIcon.length > 0) {
+//	for (let index = 0; index < popupCloseIcon.length; index++) {
+//		const el = popupCloseIcon[index];
+//		el.addEventListener('click', function (e) {
+//			popupClose(el.closest(".popup"));
+//			e.preventDefault();//запрещает перезагрузку стираицы при клике
+//		});
+//	}
+//}
